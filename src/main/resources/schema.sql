@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS store_employee (
 	gender bool NOT NULL,
 	CONSTRAINT store_employee_pkey PRIMARY KEY (id_)
 );
-CREATE TABLE IF NOT EXISTS store_electro (
+CREATE TABLE IF NOT EXISTS store_electro_item (
     id_ int8 NOT NULL,
     name varchar(100) NOT NULL,
     electroTypeId int8 NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS store_electro (
     quantity int8 NOT NULL,
     isArchive bool NOT NULL,
     description text NOT NULL,
-    CONSTRAINT store_electro_pkey PRIMARY KEY (id_)
+    CONSTRAINT store_electro_item_pkey PRIMARY KEY (id_)
     );
 
 CREATE TABLE IF NOT EXISTS counter (

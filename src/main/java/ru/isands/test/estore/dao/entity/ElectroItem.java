@@ -9,12 +9,12 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table(name = "store_electro")
-public class Electro implements Serializable {
+@Table(name = "store_electro_item")
+public class ElectroItem implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "electro_counter")
-    @TableGenerator(name = "electro_counter", pkColumnName = "name", pkColumnValue = "ru.isands.test.estore.dao.entity.ElectroItem", table = "counter", valueColumnName = "currentid", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "electro_item_counter")
+    @TableGenerator(name = "electro_item_counter", pkColumnName = "name", pkColumnValue = "ru.isands.test.estore.dao.entity.ElectroItem", table = "counter", valueColumnName = "currentid", allocationSize = 1)
     @Column(name = "id_", unique = true, nullable = false)
     Long id;
 
