@@ -5,12 +5,24 @@ CREATE TABLE IF NOT EXISTS store_employee (
 	patronymic varchar(100) NOT NULL,
 	birth_date timestamp NOT NULL,
 	position_id int8 NOT NULL,
+    shop_id int8 NOT NULL,
 	gender bool NOT NULL,
 	CONSTRAINT store_employee_pkey PRIMARY KEY (id_)
 );
+CREATE TABLE IF NOT EXISTS store_electro_item (
+    id_ int8 NOT NULL,
+    name varchar(100) NOT NULL,
+    elcronicTypeId int8 NOT NULL,
+    price int8 NOT NULL,
+    quantity int8 NOT NULL,
+    isArchive bool NOT NULL,
+    description text NOT NULL,
+    CONSTRAINT store_electro_item_pkey PRIMARY KEY (id_)
+    );
 
 CREATE TABLE IF NOT EXISTS counter (
-	"name" varchar(75) NOT NULL,
-	currentid int8 NULL,
-	CONSTRAINT counter_pkey PRIMARY KEY (name)
-);
+    "name" varchar(75) NOT NULL,
+    currentid int8 NULL,
+    CONSTRAINT counter_pkey PRIMARY KEY (name)
+    );
+

@@ -61,7 +61,11 @@ public class Employee implements Serializable {
 	 */
 	@Column(name = "positionId", nullable = false)
 	Long positionId;
-	
+	/**
+	 * Ссылка на должность сотрудника
+	 */
+	@Column(name = "shopId", nullable = false)
+	Long shopId;
 	/**
 	 * Пол сотрудника (true - мужской, false - женский)
 	 */
